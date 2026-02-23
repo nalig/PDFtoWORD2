@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attics — Share More, Own Less</title>
+    <meta
+      name="description"
+      content="Attics lets you rent everyday items from people and businesses near you. Save money, reduce waste, and build community."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>"
+    />
+  </head>
+  <body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" id="navbar">
+      <div class="container navbar__inner">
+        <a href="#" class="navbar__logo">
+          <svg
+            class="navbar__logo-icon"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20 4L4 18H10V34H18V26H22V34H30V18H36L20 4Z"
+              fill="currentColor"
+            />
+            <rect
+              x="16"
+              y="12"
+              width="8"
+              height="6"
+              rx="1"
+              fill="white"
+              opacity="0.6"
+            />
+          </svg>
+          <span>Attics</span>
+        </a>
+        <div class="navbar__links" id="navLinks">
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#download" class="btn btn--sm btn--primary">Download</a>
+        </div>
+        <button class="navbar__toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+      <div class="hero__bg-shapes">
+        <div class="hero__shape hero__shape--1"></div>
+        <div class="hero__shape hero__shape--2"></div>
+        <div class="hero__shape hero__shape--3"></div>
+      </div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="hero__badge">🚀 Now available in your area</span>
+          <h1 class="hero__title">
+            Share More,<br /><span class="hero__title--accent">Own Less.</span>
+          </h1>
+          <p class="hero__subtitle">
+            Rent everyday items from people and businesses in your
+            neighbourhood. Save money, reduce waste, and build real community —
+            one rental at a time.
+          </p>
+          <div class="hero__buttons">
+            <a
+              href="#"
+              class="store-btn store-btn--apple"
+              aria-label="Download on the App Store"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
+                />
+              </svg>
+              <div>
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </div>
+            </a>
+            <a
+              href="#"
+              class="store-btn store-btn--google"
+              aria-label="Get it on Google Play"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M3.18 23.27c-.36-.17-.59-.52-.59-.92V1.65c0-.4.24-.75.6-.92l10.74 11.27L3.18 23.27zm1.4.73l11.75-6.54-2.8-2.94L4.58 24zm14.49-10.2l-3.2-1.78-3.02 3.17 3.01 3.17 3.21-1.79c.56-.31.56-1.08 0-1.39v-.38zM4.58 0l9.95 9.52 2.8-2.94L5.58-.27C5.21-.47 4.85-.27 4.58 0z"
+                />
+              </svg>
+              <div>
+                <small>Get it on</small>
+                <strong>Google Play</strong>
+              </div>
+            </a>
+          </div>
+          <div class="hero__social-proof">
+            <div class="hero__avatars">
+              <div class="hero__avatar" style="background: #f0c27f">😊</div>
+              <div class="hero__avatar" style="background: #b8d4e3">🤝</div>
+              <div class="hero__avatar" style="background: #d4a5e5">💼</div>
+              <div class="hero__avatar" style="background: #a8e6cf">🏠</div>
+            </div>
+            <p><strong>2,400+</strong> rentals completed this month</p>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <div class="phone-mockup">
+            <div class="phone-mockup__notch"></div>
+            <div class="phone-mockup__screen">
+              <div class="phone-mockup__header">
+                <span class="phone-mockup__logo">Attics</span>
+                <span class="phone-mockup__icon">🔔</span>
+              </div>
+              <div class="phone-mockup__search">
+                <span>🔍</span> Search items near you...
+              </div>
+              <div class="phone-mockup__cards">
+                <div class="phone-mockup__card">
+                  <div
+                    class="phone-mockup__card-img"
+                    style="
+                      background: linear-gradient(135deg, #f6d365, #fda085);
+                    "
+                  >
+                    🔧
+                  </div>
+                  <div class="phone-mockup__card-info">
+                    <strong>Power Drill</strong>
+                    <span>€5 / day</span>
+                  </div>
+                </div>
+                <div class="phone-mockup__card">
+                  <div
+                    class="phone-mockup__card-img"
+                    style="
+                      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+                    "
+                  >
+                    📷
+                  </div>
+                  <div class="phone-mockup__card-info">
+                    <strong>DSLR Camera</strong>
+                    <span>€12 / day</span>
+                  </div>
+                </div>
+                <div class="phone-mockup__card">
+                  <div
+                    class="phone-mockup__card-img"
+                    style="
+                      background: linear-gradient(135deg, #d4fc79, #96e6a1);
+                    "
+                  >
+                    🚲
+                  </div>
+                  <div class="phone-mockup__card-info">
+                    <strong>Mountain Bike</strong>
+                    <span>€8 / day</span>
+                  </div>
+                </div>
+                <div class="phone-mockup__card">
+                  <div
+                    class="phone-mockup__card-img"
+                    style="
+                      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+                    "
+                  >
+                    🎸
+                  </div>
+                  <div class="phone-mockup__card-info">
+                    <strong>Acoustic Guitar</strong>
+                    <span>€6 / day</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero__floating hero__floating--1">📦 Rented!</div>
+          <div class="hero__floating hero__floating--2">⭐ 4.9 Rating</div>
+          <div class="hero__floating hero__floating--3">🤝 Trusted</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TRUSTED BY (Logos) ========== -->
+    <section class="trusted">
+      <div class="container">
+        <p class="trusted__label">Trusted by individuals & businesses alike</p>
+        <div class="trusted__logos">
+          <span class="trusted__logo">🏢 LocalCo</span>
+          <span class="trusted__logo">🏗️ BuildRight</span>
+          <span class="trusted__logo">📸 SnapGear</span>
+          <span class="trusted__logo">🚴 CycleShare</span>
+          <span class="trusted__logo">🎨 CreativeHub</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FEATURES ========== -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__tag">Why Attics?</span>
+          <h2 class="section-header__title">
+            Everything you need,<br />nothing you don't.
+          </h2>
+          <p class="section-header__desc">
+            Whether you're a homeowner with extra tools or a business looking to
+            monetize idle inventory — Attics makes it effortless.
+          </p>
+        </div>
+        <div class="features__grid">
+          <div class="feature-card feature-card--highlight">
+            <div class="feature-card__icon">📍</div>
+            <h3>Hyperlocal</h3>
+            <p>
+              Find items within walking distance. No shipping, no hassle — just
+              grab and go.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon">🔒</div>
+            <h3>Secure Payments</h3>
+            <p>
+              All transactions are protected with escrow. Your money is safe
+              until you're satisfied.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon">💬</div>
+            <h3>In-App Chat</h3>
+            <p>
+              Coordinate pickup times, ask questions, and build trust — all
+              within the app.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon">⭐</div>
+            <h3>Verified Reviews</h3>
+            <p>
+              Only real renters can leave reviews. Know exactly what you're
+              getting.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon">💼</div>
+            <h3>Business Dashboard</h3>
+            <p>
+              Track your inventory, earnings, and analytics in one clean
+              dashboard.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon">🛡️</div>
+            <h3>Insurance Built-In</h3>
+            <p>
+              Every rental is covered. Rent with confidence knowing items are
+              protected.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HOW IT WORKS ========== -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__tag">Simple & Fast</span>
+          <h2 class="section-header__title">Start renting in 3 easy steps</h2>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step__number">1</div>
+            <div class="step__content">
+              <h3>Browse & Discover</h3>
+              <p>
+                Search for what you need by category, distance, or price. Find
+                the perfect item in seconds.
+              </p>
+            </div>
+          </div>
+          <div class="step__connector"></div>
+          <div class="step">
+            <div class="step__number">2</div>
+            <div class="step__content">
+              <h3>Book & Pay</h3>
+              <p>
+                Select your rental period, pay securely through the app, and
+                confirm your booking instantly.
+              </p>
+            </div>
+          </div>
+          <div class="step__connector"></div>
+          <div class="step">
+            <div class="step__number">3</div>
+            <div class="step__content">
+              <h3>Pick Up & Enjoy</h3>
+              <p>
+                Meet your neighbour, grab your item, and enjoy. Return it when
+                you're done — it's that easy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== STATS ========== -->
+    <section class="stats">
+      <div class="container stats__inner">
+        <div class="stat">
+          <div class="stat__number" data-target="15000">0</div>
+          <div class="stat__label">Active Users</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number" data-target="42000">0</div>
+          <div class="stat__label">Items Listed</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number" data-target="98">0</div>
+          <div class="stat__label">% Satisfaction</div>
+        </div>
+        <div class="stat">
+          <div class="stat__number" data-target="120">0</div>
+          <div class="stat__label">Cities</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__tag">Real Stories</span>
+          <h2 class="section-header__title">Loved by people & businesses</h2>
+        </div>
+        <div class="testimonials__grid">
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+            <p>
+              "I saved over €200 last month by renting instead of buying. Attics
+              is a game-changer for my household budget."
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" style="background: #f0c27f">
+                S
+              </div>
+              <div>
+                <strong>Sophie de Vries</strong>
+                <span>Homeowner</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card testimonial-card--featured">
+            <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+            <p>
+              "We list our construction equipment on Attics during off-peak
+              seasons. It's become a real revenue stream for our business."
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" style="background: #b8d4e3">
+                M
+              </div>
+              <div>
+                <strong>Mark Jansen</strong>
+                <span>CEO, BuildRight BV</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+            <p>
+              "Needed a camera for one weekend shoot. Found a pro DSLR for €15
+              total. The owner even gave me tips!"
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" style="background: #d4a5e5">
+                L
+              </div>
+              <div>
+                <strong>Liam O'Brien</strong>
+                <span>Freelance Photographer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CTA SECTION ========== -->
+    <section class="cta" id="download">
+      <div class="cta__glow"></div>
+      <div class="container cta__inner">
+        <h2 class="cta__title">Ready to start sharing?</h2>
+        <p class="cta__subtitle">
+          Join thousands of people and businesses already using Attics. Download
+          the app for free today.
+        </p>
+        <div class="cta__buttons">
+          <a
+            href="#"
+            class="store-btn store-btn--apple store-btn--light"
+            aria-label="Download on the App Store"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
+              />
+            </svg>
+            <div>
+              <small>Download on the</small>
+              <strong>App Store</strong>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="store-btn store-btn--google store-btn--light"
+            aria-label="Get it on Google Play"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M3.18 23.27c-.36-.17-.59-.52-.59-.92V1.65c0-.4.24-.75.6-.92l10.74 11.27L3.18 23.27zm1.4.73l11.75-6.54-2.8-2.94L4.58 24zm14.49-10.2l-3.2-1.78-3.02 3.17 3.01 3.17 3.21-1.79c.56-.31.56-1.08 0-1.39v-.38zM4.58 0l9.95 9.52 2.8-2.94L5.58-.27C5.21-.47 4.85-.27 4.58 0z"
+              />
+            </svg>
+            <div>
+              <small>Get it on</small>
+              <strong>Google Play</strong>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <a href="#" class="footer__logo">
+            <svg
+              class="footer__logo-icon"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 4L4 18H10V34H18V26H22V34H30V18H36L20 4Z"
+                fill="currentColor"
+              />
+              <rect
+                x="16"
+                y="12"
+                width="8"
+                height="6"
+                rx="1"
+                fill="white"
+                opacity="0.4"
+              />
+            </svg>
+            <span>Attics</span>
+          </a>
+          <p>
+            Share more, own less. The smarter way to access things you need.
+          </p>
+        </div>
+        <div class="footer__links">
+          <div class="footer__col">
+            <h4>Product</h4>
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">For Business</a>
+            <a href="#">API</a>
+          </div>
+          <div class="footer__col">
+            <h4>Company</h4>
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Careers</a>
+            <a href="#">Press</a>
+          </div>
+          <div class="footer__col">
+            <h4>Support</h4>
+            <a href="#">Help Center</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+          </div>
+        </div>
+      </div>
+      <div class="container footer__bottom">
+        <p>&copy; 2026 Attics. All rights reserved.</p>
+        <div class="footer__socials">
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="Instagram">📸</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
