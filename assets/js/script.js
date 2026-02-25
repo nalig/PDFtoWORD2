@@ -52,7 +52,7 @@
 
   // ---------- Scroll reveal ----------
   const revealElements = document.querySelectorAll(
-    ".feature-card, .step, .testimonial-card, .stat, .trusted__logo",
+    ".step, .testimonial-card, .trusted__logo",
   );
 
   // Add the reveal class
@@ -81,55 +81,82 @@
 
   revealElements.forEach((el) => revealObserver.observe(el));
 
-  // ---------- Stat counter animation ----------
-  const statNumbers = document.querySelectorAll(".stat__number");
-
-  const formatNumber = (n) => {
-    if (n >= 1000) return n.toLocaleString("en-US");
-    return n.toString();
+  // Deferred reveal for dynamically injected elements (feature cards)
+  const initDynamicReveals = () => {
+    document.querySelectorAll(".feature-card").forEach((el) => {
+      el.classList.add("reveal");
+      revealObserver.observe(el);
+    });
   };
 
-  const countObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const target = parseInt(el.dataset.target, 10);
-          const suffix = el
-            .closest(".stat")
-            ?.querySelector(".stat__label")
-            ?.textContent.includes("%")
-            ? "%"
-            : "+";
-          let current = 0;
-          const step = target / 60;
-          const duration = 1500;
-          const startTime = performance.now();
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", () => setTimeout(initDynamicReveals, 0));
+  } else {
+    setTimeout(initDynamicReveals, 0);
+  }
 
-          const updateCounter = (timestamp) => {
-            const elapsed = timestamp - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            // Ease out cubic
-            const eased = 1 - Math.pow(1 - progress, 3);
-            current = Math.round(eased * target);
-            el.textContent =
-              formatNumber(current) +
-              (progress >= 1 ? (suffix === "%" ? "%" : "+") : "");
+  // ---------- Stat counter animation ----------
+  // Deferred: stats may be dynamically injected by stats-config.js on DOMContentLoaded
+  const initStatCounters = () => {
+    const statNumbers = document.querySelectorAll(".stat__number");
 
-            if (progress < 1) {
-              requestAnimationFrame(updateCounter);
-            }
-          };
+    const formatNumber = (n) => {
+      if (n >= 1000) return n.toLocaleString("en-US");
+      return n.toString();
+    };
 
-          requestAnimationFrame(updateCounter);
-          countObserver.unobserve(el);
-        }
-      });
-    },
-    { threshold: 0.5 },
-  );
+    const countObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseInt(el.dataset.target, 10);
+            const suffix = el
+              .closest(".stat")
+              ?.querySelector(".stat__label")
+              ?.textContent.includes("%")
+              ? "%"
+              : "+";
+            let current = 0;
+            const duration = 1500;
+            const startTime = performance.now();
 
-  statNumbers.forEach((el) => countObserver.observe(el));
+            const updateCounter = (timestamp) => {
+              const elapsed = timestamp - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              current = Math.round(eased * target);
+              el.textContent =
+                formatNumber(current) +
+                (progress >= 1 ? (suffix === "%" ? "%" : "+") : "");
+
+              if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+              }
+            };
+
+            requestAnimationFrame(updateCounter);
+            countObserver.unobserve(el);
+          }
+        });
+      },
+      { threshold: 0.5 },
+    );
+
+    statNumbers.forEach((el) => countObserver.observe(el));
+
+    // Also add reveal class for scroll animation
+    statNumbers.forEach((el) => {
+      const stat = el.closest(".stat");
+      if (stat) {
+        stat.classList.add("reveal");
+        revealObserver.observe(stat);
+      }
+    });
+  };
+
+  // Listen for stats-ready event from stats-config.js (fires after async Supabase fetch)
+  window.addEventListener("stats-ready", initStatCounters);
 
   // ---------- Smooth scroll for anchor links ----------
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
